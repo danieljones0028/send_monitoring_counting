@@ -1,5 +1,6 @@
 # Fonte
 # https://github.com/lukecyca/pyzabbix
+
 from pyzabbix import ZabbixAPI, ZabbixAPIException
 import sys
 import logging
