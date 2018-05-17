@@ -1,4 +1,4 @@
-O script baixa para um arquivo todos os usuários de um dominio do Zimbra e transforma o nome da conta no nome do item criado no zabbix. Exemplo:
+O script baixa para um arquivo com todos os usuários de um dominio do Zimbra e transforma o nome da conta no nome do item criado no zabbix. Exemplo:
 
 danieljones@macross.com fica mail.danieljones
 
