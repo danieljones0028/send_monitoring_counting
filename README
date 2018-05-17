@@ -11,3 +11,5 @@ zimbra mail.daniejones 28
 Por fim ele executa o comando:
 zabbix_sender -z IP_SRV_ZBX -i /path/file
     zabbix_sender -z 192.168.1.1 -i /opt/zabbix/Senders/coleta_enviados
+
+Para automatização da criação de itens utilizei a API.
