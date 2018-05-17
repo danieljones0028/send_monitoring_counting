@@ -1,0 +1,13 @@
+O script baixa para um arquivo todos os usuários de um dominio do Zimbra e transforma o nome da conta no nome do item criado no zabbix. Exemplo:
+
+danieljones@macross.com fica mail.danieljones
+
+Devido termos que adicionar o nome do host no enviou do zabbix_sender, o script completa adicionando o hostname(deve ser o mesmo nome que esta em /etc/zabbix/zabbix_agentd.conf Exemplo: Hostname="zimbra" OU "HostnameItem=system.hostname").
+
+Ficando:
+hostname|itemName|value
+zimbra mail.daniejones 28
+
+Por fim ele executa o comando:
+zabbix_sender -z IP_SRV_ZBX -i /path/file
+    zabbix_sender -z 192.168.1.1 -i /opt/zabbix/Senders/coleta_enviados
