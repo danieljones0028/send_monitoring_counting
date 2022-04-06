@@ -15,7 +15,7 @@ zabbixclient = config['DEFAULT']['zabbixclient']
 zmprov = config['DEFAULT']['zmprov']
 
 hostname = socket.gethostname()
-current_log = '/var/opt/zimbra.log'
+current_log = '/var/log/zimbra.log'
 
 # Staging
 # homelog = '/home/daniel_jones/Documentos/Linux/Zabbix/Zimbra/logs/zimbra.log-20220405'
