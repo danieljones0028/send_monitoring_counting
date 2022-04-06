@@ -33,4 +33,6 @@ def getlogs(accountlist, logpath):
     except Exception as exception_getlogs:
         print(exception_getlogs)
 
+
+# Definir lista e local
 getlogs(lista, local)
