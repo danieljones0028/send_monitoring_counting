@@ -1,5 +1,7 @@
-txt
 test
 temp_test
 tmp
 __pycache__
+hosts.txt
+createItemOnZabbix.py
+config.ini

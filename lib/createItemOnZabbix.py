@@ -9,11 +9,11 @@ from pyzabbix import ZabbixAPI, ZabbixAPIException
 #log.addHandler(stream)
 #log.setLevel(logging.DEBUG)
 
-ZABBIX_SERVER = "http://192.168.56.2/zabbix"
+ZABBIX_SERVER = 
 zapi = ZabbixAPI(ZABBIX_SERVER)
-zapi.login("Admin", "zabbix")
+zapi.login()
 
-zapi.session.auth = ("Admin", "zabbix")
+zapi.session.auth = ()
 zapi.session.verify = False
 
 zapi.timeout = 5.1
