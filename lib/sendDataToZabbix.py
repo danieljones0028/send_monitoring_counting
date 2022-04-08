@@ -41,7 +41,7 @@ class SendDataToZabbix:
         except Exception as accounts_error:
             print(accounts_error)
 
-    def createitem(zabbix_server_url, zabbix_user, zabbix_user_password, zabbix_session_verify, zabbix_timeout, zabbix_template, zabbix_application, zabbix_item_name, zabbix_key_name):
+    def createItem(zabbix_server_url, zabbix_user, zabbix_user_password, zabbix_session_verify, zabbix_timeout, zabbix_template, zabbix_application, zabbix_item_name, zabbix_key_name):
 
         zapi = ZabbixAPI(zabbix_server_url)
         zapi.login(zabbix_user, zabbix_user_password)
