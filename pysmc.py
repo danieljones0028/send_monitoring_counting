@@ -6,6 +6,8 @@ import configparser
 config = configparser.ConfigParser()
 config.read('config.ini')
 
+# TODO incluir log e criacao automatica de item no zabbix
+
 domain = config['DEFAULT']['domain']
 
 zabbixsender = config['DEFAULT']['zabbixsender']
@@ -25,8 +27,6 @@ zmprov = config['DEFAULT']['zmprov']
 hostname = socket.gethostname()
 current_log = '/var/log/zimbra.log'
 
-# TODO incluir log e criacao automatica de item no zabbix
-
 try:
     accounts = SendDataToZabbix.getAccounts(zmprov, hostname, domain)
 except Exception as e:
@@ -35,6 +35,7 @@ except Exception as e:
 try:
     for account in accounts:
         account = account.replace(domain, '')
+        zabbix_timeout = float(zabbix_timeout)
         SendDataToZabbix.createItem(zabbix_server_url, zabbix_user, zabbix_user_password, zabbix_session_verify, zabbix_timeout, zabbix_template_name, zabbix_application_name, f'{account}{domain}', f'msgsender.{account}')
 except Exception as e:
     print(e)

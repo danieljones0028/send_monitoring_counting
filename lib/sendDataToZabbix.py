@@ -21,7 +21,7 @@ class SendDataToZabbix:
 
                 # Enviando direto sem gerar arquivo
                 account = account.replace(domain, '')
-                send = f'{zabbixsender} -z {zabbixserver} -s {zabbixclient} -k msgsender.{account} -o {sender_value}'
+                send = f'{zabbixsender} -z {zabbixserver} -s "{zabbixclient}" -k msgsender.{account} -o {int(sender_value)}'
                 Popen([send], shell=True)
                 ########################################################
 
