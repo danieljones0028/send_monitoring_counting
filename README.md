@@ -9,7 +9,6 @@ Os testes foram feitos em cima do Zimbra 8.8.15 mas acredito que deve funcionar 
 * Quando esses dados são obtidos, eles são enviados para o servidor Zabbix server ou proxy que monitora o host Zimbra.
 
 #### Problemas
-1. Desenvolver criação automática\dinâmica de novos itens no Zabbix para novas contas. **API**
-2. Digite ARGV para chamar @domínio. O arquivo de configuração está sendo lido para isso no momento.
-3. Digite o ARGV para chamar versões do Zimbra. O arquivo de configuração está sendo lido para isso no momento.
-4. Inserir logs.
+1. Digite ARGV para chamar @domínio. O arquivo de configuração está sendo lido para isso no momento.
+2. Digite o ARGV para chamar versões do Zimbra. O arquivo de configuração está sendo lido para isso no momento.
+3. Inserir logs.
